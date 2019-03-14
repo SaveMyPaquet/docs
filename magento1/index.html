@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Module Magento1 - SaveMyPaquet</title>
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/color-brewer.min.css">
+        <link href="../css/extra.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="..">SaveMyPaquet</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="..">Api</a>
+                            </li>
+                            <li class="active">
+                                <a href="./">Module Magento1</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="..">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="disabled">
+                                <a rel="prev" >
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#presentation">Présentation</a></li>
+        <li class="main "><a href="#2-installation-du-module">2. Installation du module</a></li>
+            <li><a href="#21-installation-manuelle">2.1 Installation manuelle</a></li>
+            <li><a href="#22-installation-automatique">2.2 Installation automatique</a></li>
+        <li class="main "><a href="#3-configuration-du-module">3. Configuration du module</a></li>
+            <li><a href="#31-options-de-base">3.1 Options de base</a></li>
+            <li><a href="#32-options-de-connections-a-lapi-savemypaquet">3.2 Options de connections a l’api SaveMyPaquet</a></li>
+        <li class="main "><a href="#4-configuration-des-types-de-livraisons">4. Configuration des types de livraisons</a></li>
+        <li class="main "><a href="#5-gestion-de-frais-de-livraison">5. Gestion de frais de livraison</a></li>
+        <li class="main "><a href="#6-front-office">6. Front-office</a></li>
+        <li class="main "><a href="#7-gestion-des-expeditions-en-back-office">7. Gestion des expéditions en back-office</a></li>
+            <li><a href="#envoyer-une-demande-de-prise-en-charge">Envoyer une demande de prise en charge</a></li>
+            <li><a href="#tracker-les-colis">Tracker les colis</a></li>
+            <li><a href="#imprimer-les-etiquettes">Imprimer les étiquettes</a></li>
+            <li><a href="#traiter-les-commandes-livrees">Traiter les commandes livrées</a></li>
+            <li><a href="#annuler-les-colis">Annuler les colis</a></li>
+        <li class="main "><a href="#8-suivi-de-colis-dans-lespace-client">8. Suivi de colis dans l’espace client.</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<p><img alt="" src="../img/magento.jpg" /></p>
+<p><strong>Évolution de la documentation</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Nature des changements</th>
+<th>Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>Création            du document (Ahmed MAHI – eComTech )</td>
+<td>19/02/2018</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Table des matières</strong></p>
+<div class="toc">
+<ul>
+<li><a href="#presentation">Présentation</a></li>
+<li><a href="#2-installation-du-module">2. Installation du module</a><ul>
+<li><a href="#21-installation-manuelle">2.1 Installation manuelle</a></li>
+<li><a href="#22-installation-automatique">2.2 Installation automatique</a></li>
+</ul>
+</li>
+<li><a href="#3-configuration-du-module">3. Configuration du module</a><ul>
+<li><a href="#31-options-de-base">3.1 Options de base</a></li>
+<li><a href="#32-options-de-connections-a-lapi-savemypaquet">3.2 Options de connections a l’api SaveMyPaquet</a></li>
+</ul>
+</li>
+<li><a href="#4-configuration-des-types-de-livraisons">4. Configuration des types de livraisons</a></li>
+<li><a href="#5-gestion-de-frais-de-livraison">5. Gestion de frais de livraison</a></li>
+<li><a href="#6-front-office">6. Front-office</a></li>
+<li><a href="#7-gestion-des-expeditions-en-back-office">7. Gestion des expéditions en back-office</a><ul>
+<li><a href="#envoyer-une-demande-de-prise-en-charge">Envoyer une demande de prise en charge</a></li>
+<li><a href="#tracker-les-colis">Tracker les colis</a></li>
+<li><a href="#imprimer-les-etiquettes">Imprimer les étiquettes</a></li>
+<li><a href="#traiter-les-commandes-livrees">Traiter les commandes livrées</a></li>
+<li><a href="#annuler-les-colis">Annuler les colis</a></li>
+</ul>
+</li>
+<li><a href="#8-suivi-de-colis-dans-lespace-client">8. Suivi de colis dans l’espace client.</a></li>
+</ul>
+</div>
+<h2 id="presentation">Présentation</h2>
+<p>Ce document est destiné aux e-commerçants qui souhaitent intégrer le mode de livraison SaveMyPaquet dans leurs site e-commerce basé sur Magento 1, il explique comment installer, configurer et utiliser le module de livraison.</p>
+<p><strong>Compatibilité     et pré requis.</strong></p>
+<ul>
+<li>Magento   versions de 1.4 à 1.9.</li>
+<li>PHP   version supérieur ou égale à 5.6 </li>
+<li>PHP cURL et JSON activées sur votre serveur, pour pouvoir se connecter à l’API SaveMyPaquet.</li>
+</ul>
+<p><strong>Les   fonctionnalités du module.</strong></p>
+<ul>
+<li>Proposer  à vos clients le    mode de livraison   Save My Paquet, facilement  intégrable a    votre canal     de vente.</li>
+<li>Permettre     de récupérer    les coordonnées clients supplémentaires: mobile,    bâtiment,   étage,  position    de la porte, digicode...nécessaires     au livraison SaveMyPaquet.</li>
+<li>Une   interface client (  via le compte client Magento) qui       permettre   la traçabilité des  colis en ligne sans     passé par le site SaveMypaquet</li>
+<li>Tarifs    intégrés par défaut dans le module sans aucune intervention de  votre part.</li>
+<li>
+<p>Possibilité   de modifier les tarifs facilement et ajouter des règles de calcules     de ces derniers:</p>
+<ul>
+<li>
+<p>gratuit  </p>
+</li>
+<li>
+<p>prix fixe </p>
+</li>
+<li>
+<p>variable proportionnellement au montant de la commande </p>
+</li>
+<li>
+<p>variable par palier en fonction du poids ou le montant   de la commande.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Une interface back-office pour :</p>
+<ul>
+<li>
+<p>gérer les types de livraison, il existe 3 types de livraisons que vous pouvez les activé/désactive, modifier le nom et règle de calcule de prix.</p>
+</li>
+<li>
+<p>gérer les frais de livraison.</p>
+</li>
+<li>
+<p>envoyer des demandes de prise en charge des colis.</p>
+</li>
+<li>
+<p>imprimer les étiquettes des colis envoyé à Save My Paquet.</p>
+</li>
+<li>
+<p>suivre et  mise à jour les statuts des colis.</p>
+</li>
+<li>
+<p>annuler les colis.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-installation-du-module"><strong>2. Installation du module</strong></h2>
+<h3 id="21-installation-manuelle">2.1 Installation manuelle</h3>
+<p>Décompressez l’archive du module, copier le contenu du dossier du module dans le dossier principal Magento  </p>
+<p><img alt="" src="../img/envoifichiers.jpg" /></p>
+<p>Si votre site utilise le cache Magento, pour terminé l’installation vous devez vider le cache  manuellement depuis le Back-Office de Magento, menu <strong>Système &gt; Gestion du cache</strong>.</p>
+<p><img alt="" src="../img/gestiondecache.jpg" /></p>
+<p>Dans la page qui s’ouvre, cliquez sur "<strong>Sélectionner tout</strong>" cela sélectionne tout les types de cache   </p>
+<p>Dans la zone "<strong>Actions</strong>", sélectionnez "<strong>Rafraîchir</strong>"  puis cliquez sur "<strong>Soumettre</strong>".</p>
+<p><img alt="" src="../img/gestiondecache2.jpg" /></p>
+<h3 id="22-installation-automatique">2.2 Installation automatique</h3>
+<p>Pour l’instant le module n’est pas encore disponible dans "Magento Marketplace"  </p>
+<p>Une fois le module installé, vous allez remarquer l’ajout d’un menu principale "SaveMyPaquet"</p>
+<p><img alt="" src="../img/menu.jpg" /></p>
+<h2 id="3-configuration-du-module"><strong>3. Configuration du module</strong></h2>
+<p>Vous devez maintenant procéder à la configuration du module en cliquant sur le menu :</p>
+<p><strong>SaveMyPaquet &gt; Configuration</strong>.  </p>
+<p>Cela va vous envoyer directement vers la configuration des modes de livraison, un nouveau transporteurs apparaissent dans la liste des modes de livraison installés sur Magento il s’agit de "<strong>Livraison SaveMyPaquet</strong> ".</p>
+<p><img alt="" src="../img/config.jpg" /></p>
+<h3 id="31-options-de-base">3.1 Options de base</h3>
+<p><img alt="" src="../img/config-base.jpg" /></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Activer/Désactiver :</strong></td>
+<td>Pour activer/désactiver  le mode de  livraison Save My Paquet</td>
+</tr>
+<tr>
+<td><strong>Nom et Titre :</strong></td>
+<td>Ces            deux infos serons affiché en front-office, lors de la sélection             du mode du livraison.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32-options-de-connections-a-lapi-savemypaquet">3.2 Options de connections a l’api SaveMyPaquet</h3>
+<p>Il s’agit des 3 éléments nécessaires à l’accès à L’Api SaveMyPaquet</p>
+<p><img alt="" src="../img/config-conn.jpg" /></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Email :</strong></td>
+<td>Votre email d'identification Save My Paquet</td>
+</tr>
+<tr>
+<td><strong>Mot de passe:</strong></td>
+<td>Le          mot de passe fournie par Save My Paquet.</td>
+</tr>
+<tr>
+<td><strong>URL Webservice Save My Paquet :</strong></td>
+<td>L'URL           de base du Webservice Save My Paquet</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-configuration-des-types-de-livraisons">4. Configuration des types de livraisons</h2>
+<p>Trois types de livraison fourni avec le module:</p>
+<ul>
+<li>Optimum en 48 H 2.</li>
+<li>Premium avec suivi et photo comme preuve de livraison en 48 H 3.</li>
+<li>Premium Fast avec suivi et photo comme preuve de livraison en 24 H</li>
+</ul>
+<p>Pour chaque type de livraison vous avez la possibilité de:</p>
+<ul>
+<li>
+<p>Activé / désactivé le type de livraison</p>
+</li>
+<li>
+<p>Modifier le délai ( le titre )</p>
+</li>
+<li>
+<p>Définir le mode de calcule du prix et sa valeur:</p>
+<ul>
+<li>
+<p>gratuit </p>
+</li>
+<li>
+<p>prix fixe </p>
+</li>
+<li>
+<p>variable proportionnellement au montant de la commande</p>
+</li>
+<li>
+<p>variable par palier ( par rapport au poids ou montant de la commande )         </p>
+</li>
+</ul>
+</li>
+</ul>
+<p>La configuration des <strong>Types de livraison</strong> s'effectue depuis le menu :</p>
+<p><strong>SaveMyPaquet</strong> <strong>&gt;</strong>  <strong>Types de livraison</strong></p>
+<p>Vous accédez alors à une grille standard regroupant  les trois type de livraison,  </p>
+<p>ainsi vous pouvez modifier les types de livraison,  </p>
+<p><img alt="1552557045766" src="../img/conf-type-liv.png" /></p>
+<p>ainsi vous pouvez modifier les types de livraison, </p>
+<p><img alt="1552557193932" src="../img/conf-type-liv2.png" /></p>
+<h2 id="5-gestion-de-frais-de-livraison">5. Gestion de frais de livraison</h2>
+<p>Vous pouvez utiliser les frais de livraison de Save My Paquet fourni par défaut avec le module, ou spécifier vos propres frais de livraison, la configuration s'effectue depuis le menu :</p>
+<p><strong>SaveMyPaquet</strong> <strong>&gt;</strong> <strong>Gestion</strong> <strong>de frais de livraison</strong>   </p>
+<p>Vous accédez  à la liste de toutes les règles  de frais de port, vous pouvez filtrer cette liste sur les différents champs présents.</p>
+<p><img alt="1552557371642" src="../img/gestion-frais-liv.png" /></p>
+<p>et vous pouvez donc ajouter, supprimer et modifier les grilles de frais de port par rapport au poids ou le montant de la commande, les types de livraison précédemment configurés et les zones ( pour l’instant zone géographique limitée sur l’île de France ).</p>
+<p><img alt="1552557479442" src="../img/gestion-frais-liv2.png" /></p>
+<h2 id="6-front-office">6. Front-office</h2>
+<p>Lors du passage de la commande, si SaveMyPaquet est activé et la zone géographique du client correspond, le mode de livraison  sera  disponibles et les  types de livraison activés s‘affichent,   </p>
+<p><img alt="1552557603498" src="../img/front.png" /></p>
+<p>a la sélection du type de livraison un formulaire s‘affiche dessous, pour permettre au client d’ajouter les informations supplémentaires nécessaire.</p>
+<p><img alt="1552557689267" src="../img/coord-suppl.png" /></p>
+<h2 id="7-gestion-des-expeditions-en-back-office">7. Gestion des expéditions en back-office</h2>
+<p>Un clic sur le sous menu de Magento  "<strong>Gestion</strong> <strong>des expéditions</strong>" permet la visualisation de la liste des commandes  en cours avec le mode de livraison SaveMyPaquet.</p>
+<p><img alt="1552558750084" src="../img/gestion-expeditions.png" /></p>
+<p>Les informations de commande : date, nom, poids, montant, statut de commande/colis, et type de livraison sont visibles. Vous pouvez filtrer les commandes en utilisant tout les champs présents, les commandes qui ne sont pas encore envoyé a SaveMyPaquet ont  un statut  "<strong>Non traité</strong>" , vous pouvez changer la valeur du poids lors de l’envoi du prise en charge,</p>
+<p><img alt="1552558913262" src="../img/gestion-expeditions-grid.png" /></p>
+<p>Pour traiter les commandes, sélectionnez les commandes à traiter avec la case de gauche, puis sélectionnez une action dans la liste déroulante <strong>Actions</strong> en haut à droite du tableau :</p>
+<p><img alt="1552559012641" src="../img/gestion-expeditions-actions.png" /></p>
+<h3 id="envoyer-une-demande-de-prise-en-charge">Envoyer une demande de prise en charge</h3>
+<p>Cette action envoi une demande de création de colis pour chaque commande de la liste des commandes sélectionnés, si la commande n’a pas encore d’expédition Magento elle sera crée automatiquement.</p>
+<p>Un message indiquant la création de l’expédition, l’envoi réussi et les informations du colis :</p>
+<p><img alt="1552559167616" src="../img/demande-prise-charge.png" /></p>
+<p>Les informations retournés par SaveMyPaquet son stocké dans la BD sous forme d’attributs commande:</p>
+<ul>
+<li>Le numéro unique SaveMyPaquet associé au colis.</li>
+<li>Code barre SaveMyPaquet associé au colis</li>
+<li>Le statut du colis.</li>
+</ul>
+<p>Le statut de la commande va devenir  "<strong>En cours de traitement</strong>" et une note commande sera envoyer au client avec un lien de suivie du colis.</p>
+<p><strong>En backoffice</strong> :</p>
+<p><img alt="1552559403232" src="../img/backoffice-historique.png" /></p>
+<p><strong>Dans l’espace client</strong> :</p>
+<p><img alt="1552559532688" src="../img/espace-client-prisecharge.png" /></p>
+<h3 id="tracker-les-colis">Tracker les colis</h3>
+<p>Cette action permet de suivre les  colis des commandes, il permet aussi la mise à ajour du statut du colis dans la BD Magento.</p>
+<p><img alt="1552559857850" src="../img/Tracker-colis.png" /></p>
+<h3 id="imprimer-les-etiquettes">Imprimer les étiquettes</h3>
+<p>Pour générer un seul pdf avec la concaténation des étiquettes des colis des commandes sélectionnés.</p>
+<p>Les  étiquettes sont récupérés depuis l'api Save My Paquet au format A5.</p>
+<p><img alt="1552560009623" src="../img/etiquettes.png" /> </p>
+<h3 id="traiter-les-commandes-livrees">Traiter les commandes livrées</h3>
+<p>Cette action permet de mettre à jour le statut des commandes ( colis ) sélectionnées au statut traitée, cela uniquement pour les colis avec un statut livré dans le système Save My Ppaquet, il permet aussi de ne plus voir la commande en question dans la <strong>Gestion</strong> <strong>des expéditions.</strong></p>
+<h3 id="annuler-les-colis">Annuler les colis</h3>
+<p>Cette action  permet d’annuler le colis chez Save My Paquet, <strong>Attention cette action est irréversible</strong> et il permet aussi de ne plus voir la commande en question dans la <strong>Gestion</strong> <strong>des expéditions.</strong></p>
+<h2 id="8-suivi-de-colis-dans-lespace-client">8. Suivi de colis dans l’espace client.</h2>
+<p>Votre client peut suivre son colis avec un simple clic sur le lien de la commentaire crée lors de l’envoi de la  prise en charge de la commande dans l’<strong>espace client</strong>  </p>
+<p><img alt="1552560258793" src="../img/suivi -colis.png" /></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th align="right"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Document réalisé par Ahmed MAHI - eComTech</td>
+<td align="right">Consultant Technique Web, E-commerce Et Mobile</td>
+</tr>
+<tr>
+<td>Module de livraison <strong>SaveMyPaquet</strong> – <strong>Magento</strong> <strong>1</strong>      -Version 1.0</td>
+<td align="right"><img src="img/logo_SMP.png" width="200"></td>
+</tr>
+</tbody>
+</table></div>
+        </div>
+
+        <footer class="col-md-12">
+<!--div class="col-md-3"></div>
+<div class="col-md-9">
+<div style="
+    float: right;
+    text-align: justify;
+"><p>Guide réalisé par Ahmed MAHI - eComTech</p>
+<p>Consultant Technique E-commerce - Expert Magento</p>
+</div>
+<div style="
+    float: left;
+    text-align: justify;
+"><p><img style="
+    width: 128px;
+" src="img/logo_SMP.png"></p>
+</div>
+</div-->
+
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"search": 83, "next": 78, "help": 191, "previous": 80};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

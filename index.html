@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="None">
+        
+        
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <title>SaveMyPaquet</title>
+        <link href="css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/color-brewer.min.css">
+        <link href="css/extra.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="js/jquery-1.10.2.min.js" defer></script>
+        <script src="js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body class="homepage">
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href=".">SaveMyPaquet</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="active">
+                                <a href=".">Api</a>
+                            </li>
+                            <li >
+                                <a href="magento1/">Module Magento1</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="disabled">
+                                <a rel="next" >
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="magento1/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#presentation">Présentation</a></li>
+        <li class="main "><a href="#1-authentification">1. Authentification.</a></li>
+            <li><a href="#url">URL</a></li>
+            <li><a href="#methode">Méthode</a></li>
+            <li><a href="#parametres-obligatoires">Paramètres obligatoires</a></li>
+            <li><a href="#en-cas-de-succes">En cas de succès</a></li>
+            <li><a href="#en-cas-d-erreur">En cas d ’ erreur</a></li>
+        <li class="main "><a href="#2-creation-dun-colis">2. Création d’un colis</a></li>
+            <li><a href="#url_1">URL</a></li>
+            <li><a href="#authentification">Authentification</a></li>
+            <li><a href="#parametres-obligatoires_1">Paramètres obligatoires</a></li>
+            <li><a href="#parametres-optionnels">Paramètres optionnels</a></li>
+            <li><a href="#en-cas-de-succes_1">En cas de succès</a></li>
+            <li><a href="#en-cas-derreur">En cas d’erreur</a></li>
+        <li class="main "><a href="#3-validation-dun-colis">3. Validation d’un colis.</a></li>
+            <li><a href="#url_2">URL</a></li>
+            <li><a href="#authentification_1">Authentification</a></li>
+            <li><a href="#parametres">Paramètres</a></li>
+            <li><a href="#en-cas-de-succes_2">En cas de succès</a></li>
+            <li><a href="#en-cas-d-erreur_1">En cas d ’ erreur</a></li>
+        <li class="main "><a href="#4-modification-dun-colis">4. Modification d’un colis.</a></li>
+            <li><a href="#url_3">URL</a></li>
+            <li><a href="#authentification_2">Authentification</a></li>
+            <li><a href="#parametres-obligatoires_2">Paramètres obligatoires</a></li>
+            <li><a href="#parametres-optionnels_1">Paramètres optionnels</a></li>
+            <li><a href="#tout-les-parametres-utiliser-lors-du-creation-du-colis">Tout les paramètres utiliser lors du création du colis.</a></li>
+            <li><a href="#en-cas-derreur_1">En cas d’erreur</a></li>
+        <li class="main "><a href="#5-creation-dune-etiquette">5. Création d’une étiquette</a></li>
+        <li class="main "><a href="#6-statuttracker-dun-colis">6. Statut/Tracker d’un colis</a></li>
+            <li><a href="#url_4">URL</a></li>
+            <li><a href="#authentification_3">Authentification</a></li>
+            <li><a href="#parametres_1">Paramètres:</a></li>
+            <li><a href="#en-cas-de-succes_3">En cas de succès</a></li>
+        <li class="main "><a href="#7-annuler-un-colis">7. Annuler un colis</a></li>
+            <li><a href="#url_5">URL</a></li>
+            <li><a href="#authentification_4">Authentification</a></li>
+            <li><a href="#parametres_2">Paramètres</a></li>
+            <li><a href="#en-cas-de-succes_4">En cas de succès</a></li>
+            <li><a href="#en-cas-derreur_2">En cas d’erreur</a></li>
+        <li class="main "><a href="#8-parametres">8. Paramètres</a></li>
+            <li><a href="#81-statuts">8.1 Statuts</a></li>
+            <li><a href="#82-services">8.2 Services</a></li>
+            <li><a href="#83-position-de-la-porte">8.3 Position de la porte</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<p><img alt="" src="img/apiwebservice.jpg" /></p>
+<p><strong>Évolution de la documentation</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Nature des changements</th>
+<th>Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>Création du document (Ahmed MAHI – S3i Business )</td>
+<td>26/10/2017</td>
+</tr>
+<tr>
+<td>1.1</td>
+<td>Mise niveau par rapport a quelques améliorations de l ’ API ( Ahmed MAHI – eComTech )</td>
+<td>27/03/2018</td>
+</tr>
+<tr>
+<td>1.2</td>
+<td>L ’ ajout de l ’ adresse de picking( Ahmed MAHI – eComTech )</td>
+<td>14/04/2018</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Table des matières</strong></p>
+<div class="toc">
+<ul>
+<li><a href="#presentation">Présentation</a></li>
+<li><a href="#1-authentification">1. Authentification.</a><ul>
+<li><a href="#url">URL</a></li>
+<li><a href="#methode">Méthode</a></li>
+<li><a href="#parametres-obligatoires">Paramètres obligatoires</a></li>
+<li><a href="#en-cas-de-succes">En cas de succès</a></li>
+<li><a href="#en-cas-d-erreur">En cas d ’ erreur</a></li>
+</ul>
+</li>
+<li><a href="#2-creation-dun-colis">2. Création d’un colis</a><ul>
+<li><a href="#url_1">URL</a></li>
+<li><a href="#authentification">Authentification</a></li>
+<li><a href="#parametres-obligatoires_1">Paramètres obligatoires</a></li>
+<li><a href="#parametres-optionnels">Paramètres optionnels</a></li>
+<li><a href="#en-cas-de-succes_1">En cas de succès</a></li>
+<li><a href="#en-cas-derreur">En cas d’erreur</a></li>
+</ul>
+</li>
+<li><a href="#3-validation-dun-colis">3. Validation d’un colis.</a><ul>
+<li><a href="#url_2">URL</a></li>
+<li><a href="#authentification_1">Authentification</a></li>
+<li><a href="#parametres">Paramètres</a></li>
+<li><a href="#en-cas-de-succes_2">En cas de succès</a></li>
+<li><a href="#en-cas-d-erreur_1">En cas d ’ erreur</a></li>
+</ul>
+</li>
+<li><a href="#4-modification-dun-colis">4. Modification d’un colis.</a><ul>
+<li><a href="#url_3">URL</a></li>
+<li><a href="#authentification_2">Authentification</a></li>
+<li><a href="#parametres-obligatoires_2">Paramètres obligatoires</a></li>
+<li><a href="#parametres-optionnels_1">Paramètres optionnels</a></li>
+<li><a href="#tout-les-parametres-utiliser-lors-du-creation-du-colis">Tout les paramètres utiliser lors du création du colis.</a></li>
+<li><a href="#en-cas-derreur_1">En cas d’erreur</a></li>
+</ul>
+</li>
+<li><a href="#5-creation-dune-etiquette">5. Création d’une étiquette</a></li>
+<li><a href="#6-statuttracker-dun-colis">6. Statut/Tracker d’un colis</a><ul>
+<li><a href="#url_4">URL</a></li>
+<li><a href="#authentification_3">Authentification</a></li>
+<li><a href="#parametres_1">Paramètres:</a></li>
+<li><a href="#en-cas-de-succes_3">En cas de succès</a></li>
+</ul>
+</li>
+<li><a href="#7-annuler-un-colis">7. Annuler un colis</a><ul>
+<li><a href="#url_5">URL</a></li>
+<li><a href="#authentification_4">Authentification</a></li>
+<li><a href="#parametres_2">Paramètres</a></li>
+<li><a href="#en-cas-de-succes_4">En cas de succès</a></li>
+<li><a href="#en-cas-derreur_2">En cas d’erreur</a></li>
+</ul>
+</li>
+<li><a href="#8-parametres">8. Paramètres</a><ul>
+<li><a href="#81-statuts">8.1 Statuts</a></li>
+<li><a href="#82-services">8.2 Services</a></li>
+<li><a href="#83-position-de-la-porte">8.3 Position de la porte</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="presentation">Présentation</h2>
+<p>Le présent document est destiné au e-commerçants, il décrit les API de communication et échange des
+données entre Save My Paquet et leurs sites web, L'API est basé sur des web service de type REST.
+Les opérations sont donc réalisées uniquement avec des requêtes HTTP GET ou POST. La sortie des
+fonctions de l'API sont uniquement proposé en JSON.</p>
+<h2 id="1-authentification">1. Authentification.</h2>
+<p>L ’ application cliente ( de l ’ e-commerçant ) dispose des informations suivantes :</p>
+<ul>
+<li>Un identifiant (email)</li>
+<li>Un mot de passe</li>
+</ul>
+<p>L ’ authentification se fait selon l ’ étape suivante : L ’ application cliente demande à s ’ authentifier en
+spécifiant son identifiant et mot de passe :
+L ’ application serveur va répondre avec le token de session généré qui dispose d ’ une durée de vie
+limitée. Ce token sera utiliser durant les demande des API qui demandes une authentification préalable.</p>
+<p><strong>Exemple de réponse :</strong>
+<em>{"token":"1NiJ9.eyJzdWIiOjUsImlzcyI6Imh0dHA6Ly9zbXlwLmFobWVkbWFoaS5jb20vYXBpL2F1dGgvb</em>
+<em>G9naW4iLCJpYXQiOjE1MDkwMTQ3MzMcCI6MTUwOTAxODMzMywibmJmIjoxNTA5MDE0NzMzLCJq</em>
+<em>dGkiOiIySHFzb05SWmplS09EWXl3InOyZRBDiMV37YXh8QOZpJEM"}</em></p>
+<h5 id="url"><strong>URL</strong></h5>
+<p>https://api.savemypaquet.com/api/auth/login</p>
+<h5 id="methode"><strong>Méthode</strong></h5>
+<p><em>POST</em></p>
+<h5 id="parametres-obligatoires"><strong>Paramètres obligatoires </strong></h5>
+<ul>
+<li><em>email</em> : l ’ émail reçut par le e-commerçante pour s ’ identifier au plateforme Save My Paquet</li>
+<li><em>password</em> : le mot de passe.</li>
+</ul>
+<h5 id="en-cas-de-succes"><strong>En cas de succès</strong></h5>
+<p>les champs suivant seront retournés toujours en JSON :</p>
+<ul>
+<li><em>token</em> : avec la valeur du token.</li>
+</ul>
+<h5 id="en-cas-d-erreur"><strong>En cas d ’ erreur</strong></h5>
+<p>["invalid_email_or_password"]</p>
+<h2 id="2-creation-dun-colis">2. Création d’un colis</h2>
+<p>Cette méthode permet de créer un colis dans le système "Save MyPaquet" et retourne les informations
+permettant d ’ identifier le colis dans "Save MyPaquet".</p>
+<h5 id="url_1"><strong>URL</strong></h5>
+<p>https://api.savemypaquet.com/api/colis/new/</p>
+<h5 id="authentification"><strong>Authentification</strong></h5>
+<p><em>Méthode POST en JSON avec authentification préalable.</em></p>
+<h5 id="parametres-obligatoires_1"><strong>Paramètres</strong> <strong>obligatoires </strong></h5>
+<ul>
+<li>
+<p><strong><em>token</em></strong>   :    reçu lors de l’identification  </p>
+</li>
+<li>
+<p><strong><em>date_de_commande</em></strong>    :   format Y-m-d (ex : 2017-10-18)</p>
+</li>
+<li>
+<p><strong><em>numero_de_commande</em></strong> :    numéro de la commande</p>
+</li>
+<li>
+<p><strong><em>numero_colis</em></strong>    : numéro  propre  au  marchand et permettant d’identifier de manière unique  le colis. A chaque  numero_colis unique du marchand correspondra un unique numéro Save MyPaquet.</p>
+</li>
+<li>
+<p><strong><em>service</em></strong> : le code du service  (<strong>0</strong> =&gt;  Optimum  ,  <strong>1</strong>=&gt;  Premium  ,  <strong>2</strong> =&gt;  Premium Fast  , <strong>3</strong> =&gt;  Premium Express)  </p>
+</li>
+<li>
+<p><strong>nom_du_client</strong> :   Nom du destinataire (Prenom et Nom) </p>
+</li>
+<li>
+<p><strong>email_du_client</strong>:  Email  du destinataire  </p>
+</li>
+<li>
+<p><strong>tel_client</strong> :  Numéro  de  téléphone   du destinataire.</p>
+</li>
+<li>
+<p><strong>poids</strong> :Poids  en  kg du colis</p>
+</li>
+<li>
+<p><strong>adresse1</strong> :    adresse :   ligne 1 du  destinataire</p>
+</li>
+<li>
+<p><strong>ville</strong> :   vile du  destinataire</p>
+</li>
+<li>
+<p><strong>code_postal</strong> :     code postal du destinataire</p>
+</li>
+<li>
+<p><strong>pays</strong> :    pays du  destinataire</p>
+</li>
+<li>
+<p><strong>batiment :</strong>        </p>
+</li>
+<li>
+<p><strong>etage :</strong></p>
+</li>
+<li>
+<p><strong>porte_position :</strong>  position de la porte du     destinataire par rapport à l’escalier (1ère, 2ème…)</p>
+</li>
+<li>
+<p><strong>porte_cote</strong> :  le coté du porte par rapport a l’escalier ( 0 =&gt; droite,  1 =&gt; gauche, 2 =&gt; face )</p>
+</li>
+</ul>
+<h5 id="parametres-optionnels"><strong>Paramètres optionnels</strong></h5>
+<ul>
+<li>
+<p><strong>entreprise</strong> :  Entreprise  du  destinataire</p>
+</li>
+<li>
+<p><strong>adresse2</strong> :adresse     du  destinataire:   ligne 2</p>
+</li>
+<li>
+<p><strong>porte_indication_supp</strong> :   indications     supplémentaires par rapport au port</p>
+</li>
+<li>
+<p><strong>digicode_1</strong> :  Digicode</p>
+</li>
+<li>
+<p><strong>digicode_2</strong> :  2éme    Digicode    </p>
+</li>
+<li>
+<p><strong>commentaire</strong> :     commentaire     pour livraison</p>
+</li>
+<li>
+<p><strong>picking_adresse1</strong> :    adresse de picking si différente de l’adresse du e-commerçant, si ce    paramètre est fourni les autre éléments de l’adresse du picking devient</p>
+</li>
+<li>
+<p><strong>obligatoires</strong>    (picking_code_postal, picking_ville,  picking_pays )</p>
+</li>
+<li>
+<p><strong>picking_adresse2</strong> :    adresse de  picking : ligne 2</p>
+</li>
+<li>
+<p><strong>picking_code_postal</strong> :      code postal  picking</p>
+</li>
+<li>
+<p><strong>picking_ville</strong> :    ville   picking</p>
+</li>
+<li>
+<p><strong>picking_pays</strong>:      pays    picking</p>
+</li>
+</ul>
+<h5 id="en-cas-de-succes_1"><strong>En cas de succès</strong></h5>
+<p>les champs suivant seront  retournés:</p>
+<ul>
+<li>
+<p><strong>resultat</strong>:     avec la valeur ok</p>
+</li>
+<li>
+<p><strong>numero_Save_MyPaquet</strong>:     numéro unique "Save MyPaquet" associé au colis</p>
+</li>
+<li>
+<p><strong>code_barre</strong>:   code barre Save MyPaquet, associé au colis</p>
+</li>
+<li>
+<p><strong>statut</strong>:   statut  du colis    </p>
+</li>
+</ul>
+<h5 id="en-cas-derreur"><strong>En cas d’erreur</strong></h5>
+<ul>
+<li><strong>errorcode</strong>:    code d’erreur</li>
+<li><strong>error</strong>:    texte de l’erreur   </li>
+</ul>
+<h2 id="3-validation-dun-colis">3. Validation d’un colis.</h2>
+<p>Une demande de création de colis n'est pas prise en charge par SaveMyPaquet, il est nécessaire de la
+confirmer, cette méthode permet donc de valider le colis</p>
+<h5 id="url_2"><strong>URL</strong></h5>
+<p>https://api.savemypaquet.com/api/colis/validate/   </p>
+<h5 id="authentification_1"><strong>Authentification </strong></h5>
+<p>Méthode POST en JSON avec authentification  préalable.</p>
+<h5 id="parametres"><strong>Paramètres</strong></h5>
+<ul>
+<li>
+<p><strong>numero_Save_MyPaquet</strong> </p>
+</li>
+<li>
+<p><strong>token</strong> :    reçu lors de l’identification.</p>
+</li>
+</ul>
+<h5 id="en-cas-de-succes_2"><strong>En cas de succès</strong></h5>
+<p>les champs suivant seront  retournés:</p>
+<ul>
+<li>resultat: avec la valeur ok       </li>
+</ul>
+<h5 id="en-cas-d-erreur_1"><strong>En cas d ’ erreur</strong></h5>
+<ul>
+<li><strong>errorcode</strong>: code d’erreur</li>
+<li><strong>error</strong>: texte de l’erreur  </li>
+</ul>
+<h2 id="4-modification-dun-colis">4. Modification d’un colis.</h2>
+<p>Permets de mettre à jour les information du colis  à tout moment ( avant l’édition de l’étiquette ).</p>
+<h5 id="url_3"><strong>URL</strong></h5>
+<p>https://api.savemypaquet.com/api/colis/update/</p>
+<h5 id="authentification_2"><strong>Authentification</strong></h5>
+<p>Méthode POST en JSON avec authentification  préalable.</p>
+<h5 id="parametres-obligatoires_2"><strong>Paramètres</strong> <strong>obligatoires </strong></h5>
+<ul>
+<li><strong>numero_Save_MyPaquet</strong> </li>
+<li><strong>token</strong> :    reçu lors de l’identification.</li>
+</ul>
+<h5 id="parametres-optionnels_1"><strong>Paramètres optionnels </strong></h5>
+<h5 id="tout-les-parametres-utiliser-lors-du-creation-du-colis">Tout les paramètres utiliser lors du création du colis.</h5>
+<p><strong>En cas de succès</strong></p>
+<p>les champs suivant seront  retournés:</p>
+<ul>
+<li><strong>resultat</strong>:     avec la valeur ok   </li>
+</ul>
+<h5 id="en-cas-derreur_1"><strong>En cas d’erreur</strong></h5>
+<ul>
+<li><strong>errorcode</strong>:    code d’erreur</li>
+<li><strong>error</strong>:    texte de l’erreur   </li>
+</ul>
+<h2 id="5-creation-dune-etiquette">5. Création d’une étiquette</h2>
+<p>Permet de générer et récupérer des étiquettes  au format PDF.  </p>
+<p><strong>URL</strong> :   https://api.savemypaquet.com/api/etiquette/create/</p>
+<p><strong>Authentification :</strong>Méthode POST en JSON avec authentification  préalable.</p>
+<p><strong>Paramètres:</strong> </p>
+<ul>
+<li>
+<p><strong>numero_Save_MyPaquet</strong> </p>
+</li>
+<li>
+<p><strong>token</strong> :    reçu lors de   l’identification.</p>
+</li>
+</ul>
+<p><strong>En cas    de succès</strong>, les     champs suivant seront  retournés:</p>
+<ul>
+<li><strong>resultat</strong>:     avec la valeur ok   </li>
+<li><strong>url_etiquette</strong>:    URL du PDF de l’étiquette   </li>
+<li><strong>statut</strong>:   statut  du colis    </li>
+</ul>
+<p><strong>En cas d’erreur:</strong>    </p>
+<ul>
+<li><strong>errorcode</strong>:    code d’erreur</li>
+<li><strong>error</strong>:    texte de l’erreur       </li>
+<li></li>
+</ul>
+<h2 id="6-statuttracker-dun-colis">6. Statut/Tracker d’un colis</h2>
+<p>Cette API permet  d’avoir le statut du colis.  </p>
+<h5 id="url_4"><strong>URL</strong></h5>
+<p><a href="https://api.savemypaquet.com/api/track/">https://api.savemypaquet.com/api/track/</a>  </p>
+<h5 id="authentification_3"><strong>Authentification </strong></h5>
+<p>Méthode GET sans authentification  préalable.</p>
+<h5 id="parametres_1"><strong>Paramètres</strong>:</h5>
+<ul>
+<li><strong>numero_Save_MyPaquet</strong>  </li>
+</ul>
+<h5 id="en-cas-de-succes_3"><strong>En cas de succès</strong></h5>
+<p>les champs suivant seront  retournés:</p>
+<ul>
+<li>
+<p><strong>resultat</strong>:     avec la valeur ok       </p>
+</li>
+<li>
+<p><strong>statut</strong>:   statut  du colis    </p>
+</li>
+<li>
+<p><strong>statut_historique</strong>:     liste des statuts précédents par lequel le colis est passé</p>
+</li>
+<li>
+<p><strong>last_updated_timestamp</strong>    : temps unix du dernier changement de statut</p>
+</li>
+<li>
+<p><strong>date_livraison</strong>    : date de livraison         </p>
+</li>
+</ul>
+<p><strong>En cas d’erreur</strong></p>
+<ul>
+<li><strong>errorcode</strong>:    code d’erreur</li>
+<li><strong>error</strong>:    texte de l’erreur   </li>
+</ul>
+<h2 id="7-annuler-un-colis">7. Annuler un colis</h2>
+<p>Le colis ne peut être annulé dans les statuts suivants :    <strong>Livré ( 130 )</strong>,  <strong>En cours de livraison ( 120 )</strong></p>
+<h5 id="url_5"><strong>URL</strong></h5>
+<p>https://api.savemypaquet.com/api/colis/cancel/ </p>
+<h5 id="authentification_4"><strong>Authentification </strong></h5>
+<p>Méthode POST en JSON avec authentification préalable.</p>
+<h5 id="parametres_2"><strong>Paramètres</strong></h5>
+<ul>
+<li>
+<p><strong>numero_Save_MyPaquet</strong>      </p>
+</li>
+<li>
+<p><strong>token</strong> :    reçu lors de   l’identification.</p>
+</li>
+</ul>
+<h5 id="en-cas-de-succes_4"><strong>En cas de succès</strong></h5>
+<p>les champs suivant seront retournés toujours en JSON :</p>
+<ul>
+<li>resultat  : avec la valeur ok</li>
+</ul>
+<h5 id="en-cas-derreur_2"><strong>En cas d’erreur </strong></h5>
+<ul>
+<li>
+<p>errorcode     : code d’erreur     </p>
+</li>
+<li>
+<p>error     : texte de l’erreur</p>
+</li>
+</ul>
+<h2 id="8-parametres"><strong>8. Paramètres</strong></h2>
+<p>Certains paramètres envoyé ou reçus représenté par des code numérique  ci-dessous la signification de chaque paramètre :</p>
+<h3 id="81-statuts"><strong>8.1</strong> Statuts</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Code</strong></th>
+<th><strong>Signification</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>100</td>
+<td>Demande prise en charge</td>
+</tr>
+<tr>
+<td>105</td>
+<td>Validé e-co</td>
+</tr>
+<tr>
+<td>110</td>
+<td>Prise en charge</td>
+</tr>
+<tr>
+<td>120</td>
+<td>En cours de livraison</td>
+</tr>
+<tr>
+<td>130</td>
+<td>Livré</td>
+</tr>
+</tbody>
+</table>
+<h3 id="82-services"><strong>8.2 Services</strong></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Code</strong></th>
+<th><strong>Signification</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Optimum            en 48 H</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Premium            avec suivi et photo comme preuve de livraison en 48 H</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Premium            Fast avec suivi et photo comme preuve de livraison en 24 H</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Premium            Express avec suivi et photo comme</td>
+</tr>
+</tbody>
+</table>
+<h3 id="83-position-de-la-porte"><strong>8.3</strong> Position de la porte</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Code</strong></th>
+<th><strong>Signification</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>droite</td>
+</tr>
+<tr>
+<td>1</td>
+<td>gauche</td>
+</tr>
+<tr>
+<td>2</td>
+<td>face</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th></th>
+<th align="right"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Document réalisé par Ahmed MAHI - eComTech</td>
+<td align="right">Consultant Technique Web, E-commerce Et Mobile</td>
+</tr>
+<tr>
+<td><strong>SaveMyPaquet</strong>– API / Web service                                                                                                    Version 1.2</td>
+<td align="right"><img src="img/logo_SMP.png" width="200"></td>
+</tr>
+</tbody>
+</table></div>
+        </div>
+
+        <footer class="col-md-12">
+<!--div class="col-md-3"></div>
+<div class="col-md-9">
+<div style="
+    float: right;
+    text-align: justify;
+"><p>Guide réalisé par Ahmed MAHI - eComTech</p>
+<p>Consultant Technique E-commerce - Expert Magento</p>
+</div>
+<div style="
+    float: left;
+    text-align: justify;
+"><p><img style="
+    width: 128px;
+" src="img/logo_SMP.png"></p>
+</div>
+</div-->
+
+        </footer>
+        <script>
+            var base_url = ".",
+                shortcuts = {"search": 83, "next": 78, "help": 191, "previous": 80};
+        </script>
+        <script src="js/base.js" defer></script>
+        <script src="search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
+
+<!--
+MkDocs version : 1.0.4
+Build Date UTC : 2019-03-14 11:13:02
+-->

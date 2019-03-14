@@ -1,0 +1,19 @@
+
+.nav>li {
+    display: none;
+}
+ul.nav .main {
+    display: block;
+}
+.navbar-nav>li {
+    display: block;
+}
+.bs-sidebar .nav > li > a {
+    color: #495065;
+}
+h5, .h5 {
+    color: #495065;
+}
+h2, .h2 {
+    color: #495072;
+}
