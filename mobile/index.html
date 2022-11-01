@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="None">
+        
+        
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <title>SaveMyPaquet - Application mobile</title>
+        <link href="css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/color-brewer.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="js/jquery-1.10.2.min.js" defer></script>
+        <script src="js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body class="homepage">
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href=".">SaveMyPaquet - Application mobile</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#savemypaquet-lapplication-mobile-pour-transporteurs">SaveMyPaquet L'application mobile pour transporteurs</a></li>
+        <li class="main "><a href="#1-presentation">1. Présentation</a></li>
+        <li class="main "><a href="#2-les-fonctionnalites-de-lapplication">2. Les fonctionnalités de l'application.</a></li>
+        <li class="main "><a href="#3-installation-de-lapplication">3. Installation de l'application</a></li>
+        <li class="main "><a href="#4-utilisation">4. Utilisation.</a></li>
+            <li><a href="#41-lancement-de-lapplication">4.1 Lancement de  l'application</a></li>
+            <li><a href="#42-identification">4.2 Identification.</a></li>
+            <li><a href="#43-visualisation-du-planning-des-tournees">4.3 Visualisation du  planning des tournées.</a></li>
+            <li><a href="#44-la-collecte-des-colis-sur-les-points-darret-picking">4.4 La collecte des colis sur les points d’arrêt "Picking"</a></li>
+            <li><a href="#45-validation-des-livraisons">4.5 Validation des Livraisons</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h2 id="savemypaquet-lapplication-mobile-pour-transporteurs">SaveMyPaquet L'application mobile pour transporteurs</h2>
+<p><img alt="" src="img/smpmobile.jpg" /></p>
+<p><strong>Évolution de la documentation</strong></p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Nature des changements</th>
+<th>Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>Création ( Ahmed MAHI - eComTech )</td>
+<td>14/01/2019</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Table des matières</strong></p>
+<div class="toc">
+<ul>
+<li><a href="#savemypaquet-lapplication-mobile-pour-transporteurs">SaveMyPaquet L'application mobile pour transporteurs</a></li>
+<li><a href="#1-presentation">1. Présentation</a></li>
+<li><a href="#2-les-fonctionnalites-de-lapplication">2. Les fonctionnalités de l'application.</a></li>
+<li><a href="#3-installation-de-lapplication">3. Installation de l'application</a></li>
+<li><a href="#4-utilisation">4. Utilisation.</a><ul>
+<li><a href="#41-lancement-de-lapplication">4.1 Lancement de  l'application</a></li>
+<li><a href="#42-identification">4.2 Identification.</a></li>
+<li><a href="#43-visualisation-du-planning-des-tournees">4.3 Visualisation du  planning des tournées.</a><ul>
+<li><a href="#431-tournees">4.3.1 Tournées.</a></li>
+<li><a href="#432-points-darret">4.3.2 Points d’arrêt.</a></li>
+<li><a href="#433-colis">4.3.3 Colis.</a></li>
+</ul>
+</li>
+<li><a href="#44-la-collecte-des-colis-sur-les-points-darret-picking">4.4 La collecte des colis sur les points d’arrêt "Picking"</a></li>
+<li><a href="#45-validation-des-livraisons">4.5 Validation des Livraisons</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="1-presentation">1. Présentation</h2>
+<p>La présente documentation est destiné au transporteurs SaveMyPaquet, elle décrit les fonctionnalités de l'application mobile .</p>
+<h2 id="2-les-fonctionnalites-de-lapplication">2. Les fonctionnalités de l'application.</h2>
+<ul>
+<li>
+<p>Recevoir le planning des tournées affectés.</p>
+</li>
+<li>
+<p>Affichage des informations relatifs au deux types de points d’arrêts  picking (la collecte) et livraison.</p>
+</li>
+<li>
+<p>Affichage des informations des colis et  clients par simple scan des code-barres ou via les détails des points d’arrêt.</p>
+</li>
+<li>
+<p>Effectuer la collecte  regroupé ( picking ) via le scan des code-barres.</p>
+</li>
+<li>
+<p>Intégration Waze© pour obtenir les meilleurs itinéraires en temps réel.</p>
+</li>
+<li>
+<p>Intégration de simple sms et appel direct, </p>
+</li>
+<li>
+<p>Validation de livraison via le scan du code-barre.</p>
+</li>
+<li>
+<p>Prise de photos pour la preuve de Livraison.</p>
+</li>
+</ul>
+<h2 id="3-installation-de-lapplication">3. Installation de l'application</h2>
+<p>L'application est disponible sur Google Play, donc une simple recherche du mot "SaveMyPaquet" vous permet de trouver l’application sur le store, et il suffit de cliquer sur  "<strong>INSTALLER</strong>"</p>
+<p><img alt="" src="img/installation.jpg" /></p>
+<h2 id="4-utilisation">4. Utilisation.</h2>
+<h4 id="41-lancement-de-lapplication">4.1 Lancement de  l'application</h4>
+<p>L’application est désormais installée, ouvrir l'application, un message va vous demander d'accepter l'utilisation du <strong>GPS</strong>, cliquez sur <strong>Accepter</strong> et cocher "<strong>Jamais demander</strong>"  pour ne pas recevoir le message a chaque utilisation du gps.</p>
+<p><img alt="" src="img/lancement.jpg" /></p>
+<h4 id="42-identification">4.2 Identification.</h4>
+<p>Entrez ensuite votre login et mot de passe.</p>
+<p><img alt="" src="img/identification.png" /></p>
+<h4 id="43-visualisation-du-planning-des-tournees">4.3 Visualisation du  planning des tournées.</h4>
+<h5 id="431-tournees">4.3.1 Tournées.</h5>
+<p>Une fois connecté vous pouvez visualiser la liste des tournées  le nombre de livraison pour chaque tournée ainsi que le statut de chaque tournée.</p>
+<p><img alt="" src="img/tournees.png" /></p>
+<p>Pour voir les détails de chaque tournée il suffit de cliquer sur la tournée en question, les points d’arrêts corresponds a chaque tournée se pressentent en deux versions sous forme de liste et sur une carte,</p>
+<p><img alt="" src="img/tournees-points-arret.jpg" /></p>
+<p>Vous pouvez naviguer entre les deux écrans en cliquant sur les deux boutons  en bas.</p>
+<p><img alt="" src="img/carte.jpg" />et <img alt="" src="img/liste.jpg" /></p>
+<h5 id="432-points-darret">4.3.2 Points d’arrêt.</h5>
+<p>Le schéma ci-dessous explique l'ensemble des informations représentés sur chaque point d’arrêt du listing  </p>
+<p><img alt="" src="img/points-arret.jpg" /></p>
+<p>Il existe deux types de points d’arrêt :</p>
+<ul>
+<li>Points d’arrêt "<strong><em>Picking</em></strong>" ( ramassage des colis ) représenté par l’icône  <img alt="" src="img/icone-picking.jpg" /></li>
+<li>Points d’arrêt "<strong><em>Livraison</em></strong>" représenté par l’icône  <img alt="" src="img/icone-livraison.jpg" /></li>
+</ul>
+<p>Lorsque on clique sur un point d’arrêt on retrouve plus au moins les même informations dans le listing plus la carte,  un lien pour les scans <img alt="" src="img/scan.png" />et un lien vers les détails du colis ( bien-sur uniquement pour les points d’arrêt de type "Livraison" ) <img alt="" src="img/colis.png" /></p>
+<p><img alt="" src="img/points-arret-details.jpg" /></p>
+<p><code>A noté que l’heure  représente l’heure d'arrivé calculé / estimé sur le point en question</code>  </p>
+<h5 id="433-colis">4.3.3 Colis.</h5>
+<p>À tout moment vous pouvez utiliser le menu de navigation a gauche et via le lien "<strong>Infos Colis</strong>" faire des scans des codes-barre pour avoir toute les détails des colis.</p>
+<p><img alt="" src="img/scan-colis.png" /></p>
+<h4 id="44-la-collecte-des-colis-sur-les-points-darret-picking">4.4 La collecte des colis sur les points d’arrêt "Picking"</h4>
+<p>Pour les <em>points d’arrêt "<strong>Picking</strong>"</em> Le bouton  scan <img alt="" src="img/scan.png" />envoi vers l'écrans de scan regroupé des code barres des colis lors du ramassage.</p>
+<p>Chaque colis est représenté par un icône plus son numéro.</p>
+<p><img alt="" src="img/scan-picking.png" /></p>
+<p>Chaque scan réussi d'un code-barre change la couleur en <em>oronge</em> de l’icône du colis en question, cela permet de contrôler en temps réel tout les colis du points d’arrêt  en question.</p>
+<p>Une fois que l'ensemble ( ou une partie ) des colis est scanés, pour valider il suffit de cliquer sur le bouton en bat "<strong>ENVOYER LES COLIS SCANNES</strong>"</p>
+<p><img alt="" src="img/valider-scan-picking.png" /></p>
+<p>Les colis validé ( ramassage envoyé vers le système) change la couleur en <em>vert</em></p>
+<p>Vous pouvez aussi utiliser le menu a gauche et cliquer sur "<strong>Picking</strong>" pour valider le  ramassage de n'importe quel colis sans passer par son point d’arrêt. </p>
+<h4 id="45-validation-des-livraisons">4.5 Validation des Livraisons</h4>
+<p>Pour valider la livraison d'un colis,  il faut soit utiliser le menu et cliquer sur "Livrer" soit dans le détail du point d’arrêt ( de type livraison ) correspond au colis, cliquer sur le bouton <img alt="" src="img/scan.png" />, un résumé de colis s'affiche, ainsi qu'un boutton  vous invite à prendre une photo  dès que le code barre est scané</p>
+<p><img alt="" src="img/lien-livraison.png" /> </p>
+<p>Cliquez sur le bouton "PRENDRE UNE PHOTO" pour pouvoir prendre la photo du preuve du livraison, </p>
+<p><code>A noté que jusqu'a maintenant vous n'avez pas valider la livraison</code>  </p>
+<p><img alt="" src="img/phto-livraison.png" /></p>
+<p>Ensuite il suffit de prendre la photo du preuve du livraison et cliquer sur le bouton en <em>vert</em> "<strong>Valider</strong>"; un message va s’afficher pour vous informer que la preuve est bien envoyé et la livraison est validé.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th align="right"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Document réalisé par Ahmed MAHI - eComTech</td>
+<td align="right">Consultant Technique Web, E-commerce Et Mobile</td>
+</tr>
+<tr>
+<td></td>
+<td align="right"></td>
+</tr>
+<tr>
+<td></td>
+<td align="right"><img src="img/logo_SMP.png" width="200"></td>
+</tr>
+</tbody>
+</table></div>
+        </div>
+
+        <footer class="col-md-12">
+<!--div class="col-md-3"></div>
+<div class="col-md-9">
+<div style="
+    float: right;
+    text-align: justify;
+"><p>Guide réalisé par Ahmed MAHI - eComTech</p>
+<p>Consultant Technique E-commerce - Expert Magento</p>
+</div>
+<div style="
+    float: left;
+    text-align: justify;
+"><p><img style="
+    width: 128px;
+" src="img/logo_SMP.png"></p>
+</div>
+</div-->
+
+        </footer>
+        <script>
+            var base_url = ".",
+                shortcuts = {"search": 83, "next": 78, "help": 191, "previous": 80};
+        </script>
+        <script src="js/base.js" defer></script>
+        <script src="search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
+
+<!--
+MkDocs version : 1.0.4
+Build Date UTC : 2019-01-25 11:34:29
+-->
